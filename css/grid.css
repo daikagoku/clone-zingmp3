@@ -1,0 +1,31 @@
+.container-fluid
+{
+	width: 100%;
+	height: auto;
+	padding: 0 var(--space-block);
+}
+.container
+{
+	max-width: 1140px;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding: 0 var(--space-block);
+}
+.row 
+{
+	width: unset;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	margin: 0 calc(var(--space-block)*-1);
+}
+.col 
+{
+	width: auto;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+	padding: 0 var(--space-block);
+}
