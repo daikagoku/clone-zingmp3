@@ -1,0 +1,209 @@
+.animation-pause
+{
+	animation-play-state: paused;
+}
+
+
+
+@keyframes animation-fade-haft 
+{
+	0%
+	{
+		opacity: 0;
+		transform: translateY(0) scale(0.6) rotate(0deg);
+	}
+	25%
+	{
+		opacity: 1;
+		transform: translateY(150%) scale(1.2) rotate(-95deg);
+	}
+	50%
+	{
+		opacity: 0;
+		transform: translateY(250%) scale(1.3) rotate(-160deg);
+	}
+}
+
+@keyframes animation-fade
+{
+	0%
+	{
+		opacity: 0;
+	}
+	100%
+	{
+		opacity: 1;
+	}
+}
+
+@keyframes animation-fade-down
+{
+	0% 
+	{
+		opacity: 0;
+		transform: translateY(-5%);
+	}
+	100% 
+	{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes animation-fade-left
+{
+	0% 
+	{
+		opacity: 0;
+		transform: translateX(5%);
+	}
+	100% 
+	{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes animation-fade-left
+{
+	0% 
+	{
+		opacity: 0;
+		transform: translateX(-5%);
+	}
+	100% 
+	{
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+@keyframes animation-half-round-left
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	100%
+	{
+		transform: rotate(180deg);
+	}
+}
+@keyframes animation-round-left
+{
+	100%
+	{
+		transform: rotate(360deg);
+	}
+}@keyframes animation-loading-wavy
+{
+	0%
+	{
+		transform: translateZ(0);
+	}
+	50%
+	{
+		transform: translateZ(10rem);
+	}
+	100%
+	{
+		transform: translateZ(0);
+	}
+}
+@keyframes animation-loading-zoom-in
+{
+	0%
+	{
+		opacity: 0;
+		transform: scale(0.5);
+	}
+	100%
+	{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@keyframes animation-loading-fade-zoom-in
+{
+	0%
+	{
+		opacity: 0;
+		transform: scale(0);
+	}
+	50%
+	{
+		opacity: 1;
+		transform: scale(0.5);
+	}
+	100%
+	{
+		opacity: 0;
+		transform: scale(1);
+	}
+}
+@keyframes animation-loading-infinity-left
+{
+	50%
+	{
+		transform: rotate(360deg);
+	}
+	100%
+	{
+		transform: rotate(360deg);
+	}
+}
+@keyframes animation-loading-infinity-right
+{
+	50%
+	{
+		transform: rotate(-360deg);
+	}
+	100%
+	{
+		transform: rotate(-360deg);
+	}
+}
+
+
+@keyframes animation-fade-round
+{
+	0%
+	{
+		opacity: 0;
+		transform: rotate(30deg);
+	}
+	50%
+	{
+		opacity: 1;
+		transform: rotate(0deg);
+	}
+	100%
+	{
+		opacity: 0;
+		transform: rotate(-10deg);
+	}
+}
+.animation-visible-left
+{
+	animation-name: animation-visible-left ;
+	animation-iteration-count: 1;
+	animation-fill-mode: backwards;
+}
+
+@keyframes animation-visible-left
+{
+	100%
+	{
+		transform: translateX(-100%);
+	}
+}
+.animation-hidden-right
+{
+	animation-name: animation-visible-left ;
+	animation-iteration-count: 1;
+	animation-fill-mode: backwards;
+}
+@keyframes animation-hidden-right
+{
+	100%
+	{
+		transform: translateX(100%);
+	}
+}
