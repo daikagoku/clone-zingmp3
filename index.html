@@ -1,767 +1,1648 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Clone Zing Mp3</title>
-   <link rel="icon" href="favicon.ico">
-   <link rel="icon" href="favicon-32x32.png">
-   <link rel="stylesheet" href="./css/fontawesome.css">
-   <link rel="stylesheet" href="./css/bootstrap-icons.css">
-   <link rel="stylesheet" href="./css/reset.css">
-   <link rel="stylesheet" href="./css/background.css">
-   <link rel="stylesheet" href="./css/grid.css">
-   <link rel="stylesheet" href="./css/animation.css">
-   <link rel="stylesheet" href="./css/style.css">
-   <link rel="stylesheet" href="./css/responsive.css">
-   <style type="text/css" media="screen">
-      
-   </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Clone Zing Mp3</title>
+	<link rel="icon" href="favicon.ico">
+	<link rel="icon" href="favicon-32x32.png">
+	<link rel="stylesheet" href="../../css/fontawesome.css">
+	<link rel="stylesheet" href="../../css/bootstrap-icons.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/grid.css">
+	
+	<link rel="stylesheet" href="../../css/background.css">
+	<link rel="stylesheet" href="../../css/color.css">
+	<link rel="stylesheet" href="../../css/animation.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/theme.css">
+	<link rel="stylesheet" href="../../css/utilities.css">
+	<link rel="stylesheet" href="./css/responsive.css">
+	<style type="text/css" media="screen">
+		
+	</style>
 
 </head>
-<body class="container-fluid body-container">
-   <section class="row top-container">
-         <section class="col left-container">
-               <div class="left-content">
-                  <div class="left-content-logo">
-                     <img class="logo-md"src="./img/logo-mp3.svg" alt="">
-                     <img class="logo-sm"src="./img/zingmp3icon.png"alt="">
-                  </div>
-                  <nav class="left-content-menu top">
-                     <ul class="left-content-menu-list">
-                        <li class="left-content-menu-list-item">
-                           <a class="left-content-menu-list-link"href="#">
-                              <i class="icon bi bi-collection-play"></i>
-                               <span class="text">Cá nhân</span>
-                           </a>
-                        </li>
-                        <li class="left-content-menu-list-item">
-                           <a class="left-content-menu-list-link active"href="#">
-                              <i class="icon bi bi-disc"></i>
-                               <span class="text">Khám phá</span>
-                           </a>
-                        </li>
-                        <li class="left-content-menu-list-item">
-                           <a class="left-content-menu-list-link"href="#">
-                              <i class="icon fas fa-chart-bar"></i>
-                               <span class="text">#Zingchart</span>
-                           </a>
-                        </li>
-                        <li class="left-content-menu-list-item">
-                           <a class="left-content-menu-list-link"href="#">
-                              <i class="icon bi bi-broadcast"></i>
-                               <span class="text">Radio</span>
-                           </a>
-                        </li>
-                        <li class="left-content-menu-list-item">
-                           <a class="left-content-menu-list-link"href="#">
-                              <i class="icon fas fa-clipboard-list"></i>
-                               <span class="text">Theo dõi</span>
-                           </a>
-                        </li>
-                     </ul>
-                  </nav>
-                  <span class="horizontal-line"></span>
-                  <nav class="left-content-menu bottom">
-                     <ul class="left-content-menu-list">
-                        <li class="left-content-menu-list-item">
-                           <a class="left-content-menu-list-link"href="#">
-                              <i class="icon fas fa-music"></i>
-                              <span class="text">Nhạc mới</span>
-                           </a>
-                        </li>
-                        <li class="left-content-menu-list-item">
-                           <a class="left-content-menu-list-link"href="#">
-                              <i class="icon fas fa-icons"></i>
-                              <span class="text">Thể loại</span>
-                           </a>
-                        </li>
-                        <li class="left-content-menu-list-item">
-                           <a class="left-content-menu-list-link"href="#">
-                              <i class="icon far fa-star"></i>
-                              <span class="text">Top 100</span>
-                           </a>
-                        </li>
-                        <li class="left-content-menu-list-item">
-                           <a class="left-content-menu-list-link"href="#">
-                              <i class="icon fab fa-youtube"></i>
-                              <span class="text">MV</span>
-                           </a>
-                        </li>
-                        <li class="left-content-menu-list-item">
-                           <div class="left-content-menu-login">
-                              <p class="left-content-menu-login-content">Đăng nhập để khám phá những playlist dành riêng cho chính bạn.<a class="left-content-menu-login-btn"href="#">Đăng nhập</a></p>     
-                           </div>
-                        </li>
-                     </ul>
-                  </nav>
-               </div>
-         </section>
-         <section class="col main-container">
-               <header class="header-content">
-                  <div class="col header-left">
-                     <ul class="header-left-menu-arrow">
-                        <li class="header-left-menu-arrow-item">
-                           <a href="#"type="button" class="header-left-menu-arrow-btn left">
-                              <i class="fas fa-arrow-left"></i>
-                           </a>     
-                        </li>
-                        <li class="header-left-menu-arrow-item">
-                           <a href="#"type="button" class="header-left-menu-arrow-btn right">
-                              <i class="fas fa-arrow-right"></i>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="col header-center">
-                     <form action="" class="header-center-form-search"id="form-search">
-                        <input type="text" class="header-center-form-search-input"placeholder="Nhập tên bài hát, nghệ sĩ hoặc MV ..."name="search"autocomplete="off">
-                        <button class="header-center-form-search-btn submit"type="submit">
-                           <i class="fas fa-search"></i>
-                        </button>
-                        <button class="header-center-form-search-btn reset"type="reset">
-                           <i class="fas fa-times"></i>
-                        </button>
-                        <div class="header-center-form-search-history">
-                           <div class="header-center-form-search-history-title">Lịch sử tìm kiếm:</div>
-                           <ul class="header-center-form-search-history-menu">
-                           </ul>
-                        </div>
-                     </form>
-                  </div>
-                  <div class="col header-right">
-                     <ul class="header-left-menu-icon">
-                        <li class="header-left-menu-icon-item">
-                           <a href="#"type="button" class="header-left-menu-icon-link color-gradient"><i class="fas fa-tshirt"></i></a>      
-                        </li>
-                        <li class="header-left-menu-icon-item">
-                           <a href="#"type="button" class="header-left-menu-icon-link"><i class="fas fa-upload"></i></a>
-                        </li>
-                        <li class="header-left-menu-icon-item">
-                           <a href="#"type="button" class="header-left-menu-icon-link"><i class="fas fa-cog"></i></a>
-                        </li>
-                        <li class="header-left-menu-icon-item ">
-                           <a href="#"type="button" class="header-left-menu-icon-link  white"><i class="fas fa-user"></i></a>
-                        </li>
-                     </ul>
-                  </div>
-               </header>
-               <main  class="main-content">
-                  <div class="slide-content" id="slide">
-                     <div class="slide-content-list">
-                        <div class="col slide-content-item active">
-                           <div class="slide-content-item-card">
-                              <div class="slide-content-item-thumbnail">
-                                 <img class="slide-content-item-img"src="./img/thumbnail1.jpg" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col slide-content-item">
-                           <div class="slide-content-item-card">
-                              <div class="slide-content-item-thumbnail">
-                                 <img class="slide-content-item-img"src="./img/thumbnail2.jpg" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col slide-content-item">
-                           <div class="slide-content-item-card">
-                              <div class="slide-content-item-thumbnail">
-                                 <img class="slide-content-item-img"src="./img/thumbnail3.jpg" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col slide-content-item">
-                           <div class="slide-content-item-card">
-                              <div class="slide-content-item-thumbnail">
-                                 <img class="slide-content-item-img"src="./img/thumbnail4.jpg" alt="">
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <buttom class="slide-content-btn left"><i class="fas fa-chevron-left"></i></buttom>
-                     <buttom class="slide-content-btn right"><i class="fas fa-chevron-right"></i></buttom>
-                  </div>
-                  <!-------------------------------------------------------------------->
-                  <div class="group-card-content">
-                     <div class="group-card-head">
-                        <h1 class="group-card-title">Tâm Trạng Và Hoạt Động</h1>
-                        <ul class="group-card-menu-arrow">
-                           <li class="group-card-menu-arrow-item">
-                              <a href="#" type="button"class="group-card-menu-arrow-btn left">
-                                 <i class="fas fa-chevron-left"></i>
-                              </a>     
-                           </li>
-                           <li class="group-card-menu-arrow-item">
-                              <a href="#" type="button"class="group-card-menu-arrow-btn right">
-                                 <i class="fas fa-chevron-right"></i>
-                              </a>
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="group-card-body">
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content rectangle ">
-                                 <img class="group-card-item-img"src="./img/card-rect1.jpg" alt="">
-                              </div>
-                              <h5 class="group-card-item-title category">Tập trung</h5>
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                           </div>
-                        </div>
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content rectangle ">
-                                 <img class="group-card-item-img"src="./img/card-rect2.jpg" alt="">
-                              </div>
-                              <h5 class="group-card-item-title category">Cà phê</h5>
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                           </div>
-                        </div>
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content rectangle ">
-                                 <img class="group-card-item-img"src="./img/card-rect3.jpg" alt="">
-                              </div>
-                              <h5 class="group-card-item-title category">Sức khỏe</h5>
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                           </div>
-                        </div>
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content rectangle ">
-                                 <img class="group-card-item-img"src="./img/card-rect4.jpg" alt="">
-                              </div>
-                              <h5 class="group-card-item-title category">Du lịch</h5>
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                           </div>
-                        </div>
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content rectangle ">
-                                 <img class="group-card-item-img"src="./img/card-rect5.jpg" alt="">
-                              </div>
-                              <h5 class="group-card-item-title category">Thiên nhiên</h5>
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <!-------------------------------------------------------------------->
-                  <div class="group-card-content">
-                     <div class="group-card-head">
-                        <h1 class="group-card-title">Những Bản Hit</h1>
-                        <ul class="group-card-menu-arrow">
-                           <li class="group-card-menu-arrow-item">
-                              <a href="#" type="button"class="group-card-menu-arrow-btn left">
-                                 <i class="fas fa-chevron-left"></i>
-                              </a>  
-                           </li>
-                           <li class="group-card-menu-arrow-item">
-                              <a href="#" type="button"class="group-card-menu-arrow-btn right">
-                                 <i class="fas fa-chevron-right"></i>
-                              </a>
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="group-card-body">
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content square">
-                                 <img class="group-card-item-img"src="./img/card1.jpg" alt="">
-                              </div>
+<body class="container-fluid body-container"data-theme="white">
+	<section class="row top-container">
+			<section class="col left-container">
+					<div class="left-content"id="menu-left">
+						<a data-type="button"href="#"class="left-content-logo">
+							<img class="logo-md"src="../../img/logo-mp3.svg" alt="">
+							<img class="logo-sm"src="../../img/zingmp3icon.png"alt="">
+						</a>
+						<nav class="left-content-menu top">
+							<ul class="menu top">
+								<li class="menu-item">
+									<a data-type="link"class="menu-link"href="#">
+										<i class="icon fas fa-headphones"></i>
+										 <span class="text">Cá nhân</span>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a data-type="link"class="menu-link"href="#">
+										<i class="icon bi bi-disc"></i>
+										 <span class="text">Khám phá</span>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a data-type="link"class="menu-link"href="#">
+										<i class="icon fas fa-chart-bar"></i>
+										 <span class="text">#Zingchart</span>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a data-type="link"class="menu-link"href="#">
+										<i class="icon bi bi-broadcast"></i>
+										 <span class="text">Radio</span>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a data-type="link"class="menu-link"href="#">
+										<i class="icon fas fa-clipboard-list"></i>
+										 <span class="text">Theo dõi</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<span class="horizontal-line"></span>
+						<nav class="left-content-menu bottom">
+							<ul class="menu bottom">
+								<li class="menu-item">
+									<a data-type="link"class="menu-link"href="#new-song">
+										<i class="icon fas fa-music"></i>
+										<span class="text">Nhạc mới</span>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a data-type="link"class="menu-link"href="#">
+										<i class="icon fas fa-icons"></i>
+										<span class="text">Thể loại</span>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a data-type="link"class="menu-link"href="#top-100">
+										<i class="icon far fa-star"></i>
+										<span class="text">Top 100</span>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a data-type="link"class="menu-link"href="#">
+										<i class="icon bi bi-play-btn"></i>
+										<span class="text">MV</span>
+									</a>
+								</li>
+								<li class="menu-item">
+									<div class="left-content-menu-login">
+										<p class="left-content-menu-login-content">Đăng nhập để khám phá những playlist dành riêng cho chính bạn.<a data-type="button"class="left-content-menu-login-btn"href="#">Đăng nhập</a></p>		
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</div>
+			</section>
+			<section class="col main-container">
+					<header class="row header-content">
+						<div class="col header-left">
+							<ul class="history-menu-arrow">
+								<li class="history-menu-arrow-item">
+									<a href="#"data-type="button"aria-hidden="true" class="history-menu-arrow-btn back">
+										<i class="fas fa-arrow-left"></i>
+									</a>		
+								</li>
+								<li class="history-menu-arrow-item">
+									<a href="#"data-type="button"aria-hidden="true" class="history-menu-arrow-btn forward">
+										<i class="fas fa-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col header-center">
+							<form action=""class="header-form-search"id="form-search">
+								<input type="text" class="header-form-search-input"placeholder=" "name="search"autocomplete="off">
+								<label for="search"class="header-form-search-input-label"></label>
+								<button class="header-form-search-btn submit"data-type="button"type="submit">
+									<i class="fas fa-search"></i>
+								</button>
+								<button class="header-form-search-btn reset"data-type="button"type="reset">
+									<i class="fas fa-times"></i>
+								</button>
+							</form>
+						</div>
+						<div class="col header-right">
+							<ul class="menu-icon">
+								<li class="menu-icon-item">
+									<a href="#"data-type="button"aria-hidden="true" class="menu-icon-link  modal-btn"data-target="#customThemeModal">
+										<i class="icon fas fa-tshirt color-gradient"></i></a>		
+								</li>
+								<li class="menu-icon-item">
+									<a href="#"data-type="button"aria-hidden="true" class="menu-icon-link">
+										<i class="icon fas fa-upload"></i></a>
+								</li>
+								<li class="menu-icon-item">
+									<a href="#"data-type="button"aria-hidden="true" class="menu-icon-link">
+										<i class="icon fas fa-cog"></i></a>
+								</li>
+								<li class="menu-icon-item ">
+									<a href="#"data-type="button"aria-hidden="true" class="menu-icon-link">
+										<i class="icon fas fa-user"></i></a>
+								</li>
+							</ul>
+						</div>
+					</header>
+					<main  class="row main-content">
+						<div class="col main-column"id="main">
+							<div class="row slide-content" id="slide">
+								<div class="slide-content-list">
+									<div class="col slide-content-item active">
+										<div class="slide-content-item-container">
+											<div class="slide-content-item-content">
+												<img class="slide-content-item-img"src="../../img/thumbnail1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="col slide-content-item">
+										<div class="slide-content-item-container">
+											<div class="slide-content-item-content">
+												<img class="slide-content-item-img"src="../../img/thumbnail2.jpg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="col slide-content-item">
+										<div class="slide-content-item-container">
+											<div class="slide-content-item-content">
+												<img class="slide-content-item-img"src="../../img/thumbnail3.jpg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="col slide-content-item">
+										<div class="slide-content-item-container">
+											<div class="slide-content-item-content">
+												<img class="slide-content-item-img"src="../../img/thumbnail4.jpg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="col slide-content-item">
+										<div class="slide-content-item-container">
+											<div class="slide-content-item-content">
+												<img class="slide-content-item-img"src="../../img/thumbnail5.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<buttom data-type="button"class="slide-content-btn left">
+									<i class="fas fa-chevron-left"></i>
+								</buttom>
+								<buttom data-type="button"class="slide-content-btn right">
+									<i class="fas fa-chevron-right"></i>
+								</buttom>
+							</div>
+							<!-------------------------------------------------------------------->
+							<div class="row"id="category">
+								<div class="group-card-content">
+									<div class="group-card-head">
+										<h3 class="group-card-title">Tâm Trạng Và Hoạt Động</h3>
+										<ul class="group-card-menu-arrow">
+											<li class="group-card-menu-arrow-item">
+												<a href="#" data-type="button"class="group-card-menu-arrow-btn left">
+													<i class="fas fa-chevron-left"></i>
+												</a>		
+											</li>
+											<li class="group-card-menu-arrow-item">
+												<a href="#" data-type="button"class="group-card-menu-arrow-btn right">
+													<i class="fas fa-chevron-right"></i>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="group-card-body">
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content rectangle ">
+													<img class="card-item-thumbnail"src="../../img/card-rect1.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<h5 class="card-item-title category">Tập trung</h5>
+											</div>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content rectangle ">
+													<img class="card-item-thumbnail"src="../../img/card-rect2.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<h5 class="card-item-title category">Cà phê</h5>	
+											</div>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content rectangle ">
+													<img class="card-item-thumbnail"src="../../img/card-rect3.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>										
+												<h5 class="card-item-title category">Sức khỏe</h5>
+											</div>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content rectangle ">
+													<img class="card-item-thumbnail"src="../../img/card-rect4.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<h5 class="card-item-title category">Du lịch</h5>	
+											</div>		
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content rectangle ">
+													<img class="card-item-thumbnail"src="../../img/card-rect5.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>	
+												<h5 class="card-item-title category">Thiên nhiên</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-------------------------------------------------------------------->
+							<div class="row"id="new-song">
+								<div class="group-card-content">
+									<div class="group-card-head">
+										<h3 class="group-card-title">Hôm nay nghe gì</h3>
+										<ul class="group-card-menu-arrow">
+											<li class="group-card-menu-arrow-item">
+												<a href="#" data-type="button"class="group-card-menu-arrow-btn left">
+													<i class="fas fa-chevron-left"></i>
+												</a>	
+											</li>
+											<li class="group-card-menu-arrow-item">
+												<a href="#" data-type="button"class="group-card-menu-arrow-btn right">
+													<i class="fas fa-chevron-right"></i>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="group-card-body">
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content square">
+													<img class="card-item-thumbnail"src="../../img/card1.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<div class="card-item-option">
+													<ul class="option-menu">
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																<i class=" far fa-heart"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																<i class=" icon-pause far fa-pause-circle"></i>
+																<i class=" icon-play far fa-play-circle"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																<i class="fas fa-ellipsis-h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5 class="card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content square">
+													<img class="card-item-thumbnail"src="../../img/card2.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<div class="card-item-option">
+													<ul class="option-menu">
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																<i class=" far fa-heart"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																<i class=" icon-pause far fa-pause-circle"></i>
+																<i class=" icon-play far fa-play-circle"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																<i class="fas fa-ellipsis-h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5 class="card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content square">
+													<img class="card-item-thumbnail"src="../../img/card4.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<div class="card-item-option">
+													<ul class="option-menu">
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																<i class=" far fa-heart"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																<i class=" icon-pause far fa-pause-circle"></i>
+																<i class=" icon-play far fa-play-circle"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																<i class="fas fa-ellipsis-h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5 class="card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content square">
+													<img class="card-item-thumbnail"src="../../img/card5.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<div class="card-item-option">
+													<ul class="option-menu">
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																<i class=" far fa-heart"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																<i class=" icon-pause far fa-pause-circle"></i>
+																<i class=" icon-play far fa-play-circle"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																<i class="fas fa-ellipsis-h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5 class="card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content square">
+													<img class="card-item-thumbnail"src="../../img/card1.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<div class="card-item-option">
+													<ul class="option-menu">
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																<i class=" far fa-heart"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																<i class=" icon-pause far fa-pause-circle"></i>
+																<i class=" icon-play far fa-play-circle"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																<i class="fas fa-ellipsis-h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5 class="card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content square">
+													<img class="card-item-thumbnail"src="../../img/card2.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<div class="card-item-option">
+													<ul class="option-menu">
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																<i class=" far fa-heart"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																<i class=" icon-pause far fa-pause-circle"></i>
+																<i class=" icon-play far fa-play-circle"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																<i class="fas fa-ellipsis-h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5 class="card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content square">
+													<img class="card-item-thumbnail"src="../../img/card2.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<div class="card-item-option">
+													<ul class="option-menu">
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																<i class=" far fa-heart"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																<i class=" icon-pause far fa-pause-circle"></i>
+																<i class=" icon-play far fa-play-circle"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																<i class="fas fa-ellipsis-h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5 class="card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-------------------------------------------------------------------->
+							<div class="row"id="top-100">
+								<div class="group-card-content">
+									<div class="group-card-head">
+										<h3 class="group-card-title">Top 100 bài hát hay nhất</h3>
+										<ul class="group-card-menu-arrow">
+											<li class="group-card-menu-arrow-item">
+												<a href="#" data-type="button"class="group-card-menu-arrow-btn left">
+													<i class="fas fa-chevron-left"></i>
+												</a>	
+											</li>
+											<li class="group-card-menu-arrow-item">
+												<a href="#" data-type="button"class="group-card-menu-arrow-btn right">
+													<i class="fas fa-chevron-right"></i>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="group-card-body">
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content square">
+													<img class="card-item-thumbnail"src="../../img/card1.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<div class="card-item-option">
+													<ul class="option-menu">
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																<i class=" far fa-heart"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																<i class=" icon-pause far fa-pause-circle"></i>
+																<i class=" icon-play far fa-play-circle"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																<i class="fas fa-ellipsis-h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5 class="card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content square">
+													<img class="card-item-thumbnail"src="../../img/card2.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<div class="card-item-option">
+													<ul class="option-menu">
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																<i class=" far fa-heart"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																<i class=" icon-pause far fa-pause-circle"></i>
+																<i class=" icon-play far fa-play-circle"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																<i class="fas fa-ellipsis-h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5 class="card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content square">
+													<img class="card-item-thumbnail"src="../../img/card3.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<div class="card-item-option">
+													<ul class="option-menu">
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																<i class=" far fa-heart"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																<i class=" icon-pause far fa-pause-circle"></i>
+																<i class=" icon-play far fa-play-circle"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																<i class="fas fa-ellipsis-h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5 class="card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content square">
+													<img class="card-item-thumbnail"src="../../img/card4.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>										
+												<div class="card-item-option">
+													<ul class="option-menu">
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																<i class=" far fa-heart"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																<i class=" icon-pause far fa-pause-circle"></i>
+																<i class=" icon-play far fa-play-circle"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																<i class="fas fa-ellipsis-h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5 class="card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content square">
+													<img class="card-item-thumbnail"src="../../img/card3.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<div class="card-item-option">
+													<ul class="option-menu">
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																<i class=" far fa-heart"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																<i class=" icon-pause far fa-pause-circle"></i>
+																<i class=" icon-play far fa-play-circle"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																<i class="fas fa-ellipsis-h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5 class="card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content square">
+													<img class="card-item-thumbnail"src="../../img/card1.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<div class="card-item-option">
+													<ul class="option-menu">
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																<i class=" far fa-heart"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																<i class=" icon-pause far fa-pause-circle"></i>
+																<i class=" icon-play far fa-play-circle"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																<i class="fas fa-ellipsis-h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5 class="card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content square">
+													<img class="card-item-thumbnail"src="../../img/card4.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<div class="card-item-option">
+													<ul class="option-menu">
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																<i class=" far fa-heart"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																<i class=" icon-pause far fa-pause-circle"></i>
+																<i class=" icon-play far fa-play-circle"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																<i class="fas fa-ellipsis-h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5 class="card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content square">
+													<img class="card-item-thumbnail"src="../../img/card1.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<div class="card-item-option">
+													<ul class="option-menu">
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																<i class=" far fa-heart"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																<i class=" icon-pause far fa-pause-circle"></i>
+																<i class=" icon-play far fa-play-circle"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																<i class="fas fa-ellipsis-h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5 class="card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content square">
+													<img class="card-item-thumbnail"src="../../img/card1.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+												<div class="card-item-option">
+													<ul class="option-menu">
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																<i class=" far fa-heart"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																<i class=" icon-pause far fa-pause-circle"></i>
+																<i class=" icon-play far fa-play-circle"></i>
+															</a>
+														</li>
+														<li class="option-menu-item">
+															<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																<i class="fas fa-ellipsis-h"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5 class="card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-------------------------------------------------------------------->
+							<div class="row"id="singer">
+								<div class="group-card-content">
+									<div class="group-card-center-arrow">							
+										<a href="#" data-type="button"class="btn-circle group-card-center-arrow-btn group-card-menu-arrow-btn left">
+											<i class="fas fa-chevron-left"></i>
+										</a>	
+									
+										<a href="#" data-type="button"class="btn-circle group-card-center-arrow-btn group-card-menu-arrow-btn right">
+											<i class="fas fa-chevron-right"></i>
+										</a>	
+									</div>
+									<div class="group-card-body">
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content circle">
+													<img class="card-item-thumbnail"src="../../img/chidan.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+											</div>
+											<h5 class="card-item-title singer">CHI DÂN</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content circle">
+													<img class="card-item-thumbnail"src="../../img/sontung.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+											</div>
+											<h5 class="card-item-title singer">SƠN TÙNG</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content circle">
+													<img class="card-item-thumbnail"src="../../img/karik.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+											</div>
+											<h5 class="card-item-title singer">KARIK</h5>
+										</div>
+										<div class="col card-item main-content-card">
+											<div class="card-item-container">
+												<div class="card-item-content circle">
+													<img class="card-item-thumbnail"src="../../img/onlyc.jpg" alt="">
+													<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+												</div>
+											</div>
+											<h5 class="card-item-title singer">ONLY C</h5>
+										</div>							
+									</div>
+								</div>
+							</div>
+							<!-------------------------------------------------------------------->
+							<div class="row zingchoice-content"id=zingchoice>								
+								<div class="col">
+									<div class="zingchoice-head">
+										<h4 class="zingchoice-content-title">Mix Zing Choice</h4>
+									</div>
+									<div class="zingchoice-content-group">
+										<div class="col zingchoice-content-left">
+											<div class="row zingchoice-content-view">
+												<div class="col zingchoice-content-view-left">
+													<div class="card-item-container">
+														<div class="card-item-content square">
+															<img class="card-item-thumbnail"src="../../img/card1.jpg" alt="">
+															<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+														</div>
+														<div class="card-item-option">
+															<ul class="option-menu">
+																<li class="option-menu-item">
+																	<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																		<i class=" far fa-heart"></i>
+																	</a>
+																</li>
+																<li class="option-menu-item">
+																	<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																		<i class=" icon-pause far fa-pause-circle"></i>
+																		<i class=" icon-play far fa-play-circle"></i>
+																	</a>
+																</li>
+																<li class="option-menu-item">
+																	<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																		<i class="fas fa-ellipsis-h"></i>
+																	</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="col zingchoice-content-view-right">
+													<a href="#"class="h5 zingchoice-content-view-title">
+														Mix bài hát hay nhất của OnlyC
+													</a>
+													<span class="zingchoice-content-view-description">Bạn nghe gần đây</span>
+													<span class="zingchoice-content-view-total">30 bài hát</span>
+												</div>
+											</div>
+										</div>
+										<div class="col zingchoice-content-right">
+											<nav class="row">
+												<div class="col zingchoice-content-menu left">
+													<ul class="zingchoice-content-list">
+														<li class="zingchoice-content-list-item">
+															<span class="number">1.</span>
+															<a href="#" data-type="link"class="link">
+																Đau Để Trưởng Thành
+															</a>
+														</li>
+														<li class="zingchoice-content-list-item">
+															<span class="number">1.</span>
+															<a href="#" data-type="link"class="link">
+																Đau Để Trưởng Thành
+															</a>
+														</li>
+														<li class="zingchoice-content-list-item">
+															<span class="number">1.</span>
+															<a href="#" data-type="link"class="link">
+																Đau Để Trưởng Thành
+															</a>
+														</li>
+														<li class="zingchoice-content-list-item">
+															<span class="number">1.</span>
+															<a href="#" data-type="link"class="link">
+																Đau Để Trưởng Thành
+															</a>
+														</li>
+														<li class="zingchoice-content-list-item">
+															<span class="number">1.</span>
+															<a href="#" data-type="link"class="link">
+																Đau Để Trưởng Thành
+															</a>
+														</li>
+													</ul>
+												</div>
+												<div class="col zingchoice-content-menu right">
+													<ul class="zingchoice-content-list">
+														<li class="zingchoice-content-list-item">
+															<span class="number">1.</span>
+															<a href="#" data-type="link"class="link">
+																Đau Để Trưởng Thành
+															</a>
+														</li>
+														<li class="zingchoice-content-list-item">
+															<span class="number">1.</span>
+															<a href="#" data-type="link"class="link">
+																Đau Để Trưởng Thành
+															</a>
+														</li>
+														<li class="zingchoice-content-list-item">
+															<span class="number">1.</span>
+															<a href="#" data-type="link"class="link">
+																Đau Để Trưởng Thành
+															</a>
+														</li>
+														<li class="zingchoice-content-list-item">
+															<span class="number">1.</span>
+															<a href="#" data-type="link"class="link">
+																Đau Để Trưởng Thành
+															</a>
+														</li>
+														<li class="zingchoice-content-list-item">
+															<span class="number">1.</span>
+															<a href="#" data-type="link"class="link">
+																Đau Để Trưởng Thành
+															</a>
+														</li>
+													</ul>
+												</div>
+											</nav>
+										</div>
+									</div>
+									<div class="zingchoice-content-group">
+										<div class="col zingchoice-content-left">
+											<div class="row zingchoice-content-view">
+												<div class="col zingchoice-content-view-left">
+													<div class="card-item-container">
+														<div class="card-item-content square">
+															<img class="card-item-thumbnail"src="../../img/sontung2.jpg" alt="">
+															<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+														</div>
+														<div class="card-item-option">
+															<ul class="option-menu">
+																<li class="option-menu-item">
+																	<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+																		<i class=" far fa-heart"></i>
+																	</a>
+																</li>
+																<li class="option-menu-item">
+																	<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+																		<i class=" icon-pause far fa-pause-circle"></i>
+																		<i class=" icon-play far fa-play-circle"></i>
+																	</a>
+																</li>
+																<li class="option-menu-item">
+																	<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+																		<i class="fas fa-ellipsis-h"></i>
+																	</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="col zingchoice-content-view-right">
+													<a href="#"class="h5 zingchoice-content-view-title">
+														Sơn Tùng M-TP
+													</a>
+													<span class="zingchoice-content-view-description">Bạn nghe gần đây</span>
+													<span class="zingchoice-content-view-total">30 bài hát</span>
+												</div>
+											</div>
+										</div>
+										<div class="col zingchoice-content-right">
+											<div class="row">
+												<div class="col zingchoice-content-menu left">
+													<ul class="zingchoice-content-list">
+														<li class="zingchoice-content-list-item">
+															<span class="number">1.</span>
+															<a href="#" data-type="link"class="link">							
+																Nơi Này Có Anh
+															</a>
+														</li>
+														<li class="zingchoice-content-list-item">
+															<span class="number">2.</span>
+															<a href="#" data-type="link"class="link">
+																Lạc Trôi
+															</a>
+														</li>
+														<li class="zingchoice-content-list-item">
+															<span class="number">3.</span>
+															<a href="#" data-type="link"class="link">
+																Remember Me
+															</a>
+														</li>
+														<li class="zingchoice-content-list-item">
+															<span class="number">4.</span>
+															<a href="#" data-type="link"class="link">
+																Em Của Ngày Hôm Qua
+															</a>
+														</li>
+														<li class="zingchoice-content-list-item">
+															<span class="number">5.</span>
+															<a href="#" data-type="link"class="link">
+																Nắng Ấm Xa Dần
+															</a>
+														</li>
+													</ul>
+												</div>
+												<div class="col zingchoice-content-menu right">
+													<ul class="zingchoice-content-list">
+														<li class="zingchoice-content-list-item">
+															<span class="number">6.</span>
+															<a href="#" data-type="link"class="link">
+																Cơn Mưa Ngang Qua
+															</a>
+														</li>
+														<li class="zingchoice-content-list-item">
+															<span class="number">7.</span>
+															<a href="#" data-type="link"class="link">
+																Khuôn Mặt Đáng Thương
+															</a>
+														</li>
+														<li class="zingchoice-content-list-item">
+															<span class="number">8.</span>
+															<a href="#" data-type="link"class="link">
+																Không Phải Dạng Vừa Đâu
+															</a>
+														</li>
+														<li class="zingchoice-content-list-item">
+															<span class="number">9.</span>
+															<a href="#" data-type="link"class="link">
+																Anh Sai Rồi
+															</a>
+														</li>
+														<li class="zingchoice-content-list-item">
+															<span class="number">10.</span>
+															<a href="#" data-type="link"class="link">
+																Chấm Hết
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<footer class="row ">
+								<div class="footer-content">
+									<div class="footer-content-head">
+										<a href="#"data-type="button"aria-hidden="true"class="footer-content-title h5">Đối tác âm nhạc</a>
+									</div>
+									<div class="footer-content-body">
+										<div class="footer-partner-list">
+											<div class="footer-partner-item">
+												<span class="footer-partner-thumbnail">
+													<img class="width"src="../../img/orcahrd.png" alt="">
+												</span>
+											</div>
+											<div class="footer-partner-item">
+												<span class="footer-partner-thumbnail">
+													<img class="width"src="../../img/yg.png" alt="">
+												</span>
+											</div>
+											<div class="footer-partner-item">
+												<span class="footer-partner-thumbnail">
+													<img class="width"src="../../img/universal-1.png" alt="">
+												</span>
+											</div>
+											<div class="footer-partner-item">
+												<span class="footer-partner-thumbnail">
+													<img class="height"src="../../img/monstercat.png" alt="">
+												</span>
+											</div>
+											<div class="footer-partner-item">
+												<span class="footer-partner-thumbnail">
+													<img class="height"src="../../img/sony.png" alt="">
+												</span>
+											</div>
+											<div class="footer-partner-item">
+												<span class="footer-partner-thumbnail">
+													<img class="height"src="../../img/beggers.png" alt="">
+												</span>
+											</div>
+											<div class="footer-partner-item">
+												<span class="footer-partner-thumbnail">
+													<img class="height"src="../../img/empire.png" alt="">
+												</span>
+											</div>
+											<div class="footer-partner-item">
+												<span class="footer-partner-thumbnail">
+													<img class="height"src="../../img/warner.png" alt="">
+												</span>
+											</li>
+										</div>
+									</div>
+								</div>
+							</footer>
+						</div>
+					</main>	
+			</section>
+	</section>
+	<section class="audio-container"id="audio">
+		<main class="audio-content">
+			<div class="audio-content-head">
+				<ul class="option-menu-tab audio-content-head-left"style="--total-item:3">
+					<span class="option-menu-tab-label"></span>
+					<li class="option-menu-tab-item">
+						<a href="#"data-type="button"class="px-3 option-menu-tab-item-link active"data-target="">Danh sách phát</a>
+					</li>
+					<li class="option-menu-tab-item">
+						<a href="#"data-type="button"class="px-3 option-menu-tab-item-link"data-target="karaoke">Karaoke</a>
+					</li>
+					<li class="option-menu-tab-item">
+						<a href="#"data-type="button"class="px-3 option-menu-tab-item-link"data-target="">Lời bài hát</a>
+					</li>
+				 </ul>
+				 <ul class="menu-icon audio-content-head-right">
+					<li class="menu-icon-item">
+						<a href="#"data-type="button"aria-hidden="true" class="menu-icon-link">
+							<i class="fas fa-cog"></i>
+						</a>		
+					</li>
+					<li class="menu-icon-item">
+						<a href="#"data-type="button"aria-hidden="true" class="menu-icon-link">
+							<i class="fas fa-chevron-down"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="audio-content-body">
+			</div>
+		</main>				
+		<div class="audio-control">
+			<audio src=""class="audio-source"></audio>
+			<div class="col audio-control-left">
+				<div class="row audio-control-view">
+					<div class="col audio-control-view-left">
+						<div class="audio-control-view-thumbnail">
+							<div class="audio-control-view-thumbnail-circle">
+								<img class="audio-control-view-thumbnail-img"src="" alt="">
+							</div>
+							<div class="audio-control-view-thumbnail-animation">
+								<div class="list">
+									<span style="--item:0"><i class="bi bi-music-note"></i></span>
+									<span style="--item:1"><i class="bi bi-music-note-beamed"></i></span>
+									<span style="--item:2"><i class="bi bi-music-note"></i></span>
+									<span style="--item:3"><i class="bi bi-music-note"></i></span>
+									<span style="--item:4"><i class="bi bi-music-note-beamed"></i></span>
+									<span style="--item:5"><i class="bi bi-music-note"></i></span>
+									<span style="--item:6"><i class="bi bi-music-note-beamed"></i></span>
+									<span style="--item:7"><i class="bi bi-music-note-beamed"></i></span>
+									<span style="--item:8"><i class="bi bi-music-note"></i></span>
+									<span style="--item:9"><i class="bi bi-music-note-beamed"></i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col audio-control-view-center">
+						<div class="audio-control-view-center-top">
+							<a href="#"class="audio-control-view-title"></a>
+						</div>
+						<div class="audio-control-view-center-bottom">
+							<span class="audio-control-view-singer"></span>
+						</div>
+					</div>
+					<div class="col audio-control-view-right">
+						<ul class="option-menu">
+							<li class="option-menu-item">
+								<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle like">
+									<i class=" icon-like far fa-heart"></i>
+									<i class=" icon-liked fas fa-heart"></i>
+								</a>
+							</li>
+							<li class="option-menu-item drop drop-click"data-stype="dropup">
+								<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more drop-btn">
+									<i class=" fas fa-ellipsis-h"></i>
+								</a>
+								<div class="more-dropup drop-content"id="moreContent">
+									<div class="more-content">
+										<div class="more-content-head">
+											<div class="col more-content-head-left">
+												<div class="">
+													<div class="more-content-view-thumbnail square">
+														<img class="more-content-view-thumbnail-img"src="" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="col more-content-head-right">
+												<div>
+													<span class="more-content-view-title"></span>
+												</div>
+												<div>
+													<span class="more-content-view-singer"></span>
+												</div>
+											</div>
+										</div>
+										<div class="more-content-body">
+											<nav class="group-btn">
+												<a data-type="button"class="group-btn-item download">
+													<i class="icon fas fa-download"></i>
+													<span class="text">Tải xuống</span>
+												</a>
+												<a data-type="button"class="group-btn-item lyric">
+													<i class="icon fas fa-file-audio"></i>
+													<span class="text">Lời bài hát</span>
+												</a>
+												<a data-type="button" class="group-btn-item block">
+													<i class="icon fas fa-ban"></i>
+													<span class="text">Chặn</span>
+												</a>
+											</nav>
+											<nav class="more-content-menu">
+												<ul class="menu">
+													<li class="menu-item">
+														<a data-type="link"class="menu-link"href="#">
+															<i class="icon fas fa-plus"></i>
+															<span class="text">Thêm vào playlist</span>
+														</a>
+													</li>
+													<li class="menu-item">
+														<a data-type="link"class="menu-link"href="#">
+															<i class="icon bi bi-broadcast"></i>
+											 				<span class="text">Phát radio của bài hát</span>
+														</a>
+													</li>
+													<li class="menu-item">
+														<a data-type="link"class="menu-link"href="#">
+															<i class="icon bi bi-file-earmark-music"></i>
+															<span class="text">Phát cùng lời bài hát</span>
+														</a>
+													</li>
+													<li class="menu-item">
+														<a data-type="link"class="menu-link"href="#">
+															<i class="icon far fa-comment"></i>
+															<span class="text">Bình luận</span>
+														</a>
+													</li>
+													<li class="menu-item">
+														<a data-type="link"class="menu-link"href="#">
+															<i class="icon fas fa-link"></i>
+															<span class="text">Sao chép liên kết</span>
+														</a>
+													</li>
+													<li class="menu-item drop drop-hover"data-style="dropright">
+														<a data-type="link"class="menu-link drop-btn"href="#">
+															<i class="icon fas fa-share"></i>
+															<span class="text">Chia sẻ</span>
+															<i class="fas fa-chevron-right"></i>
+														</a>
+														<div class="drop-content dropright"id="share-content">
+															<div class="share-content ">
+																<ul class="menu">
+																	<li class="menu-item">
+																		<a data-type="link"class="menu-link"href="#">
+																			<i class="icon fab fa-facebook-messenger"></i>
+																			<span class="text">Facebook</span>
+																		</a>
+																	</li>
+																	<li class="menu-item">
+																		<a data-type="link"class="menu-link"href="#">
+																			<i class="icon far fa-comment-dots"></i>
+															 				<span class="text">Zalo</span>
+																		</a>
+																	</li>
+																	<li class="menu-item">
+																		<a data-type="link"class="menu-link"href="#">
+																			<i class="icon fas fa-code"></i>
+																			<span class="text">Mã nhúng</span>
+																		</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col audio-control-center">
+				<ul class="option-menu  audio-control-group-btn">
+						<li class="option-menu-item">
+							<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle random">
+								<i class=" fas fa-random"></i>
+							</a>
+						</li>
+						<li class="option-menu-item">
+							<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle back">
+								<i class=" fas fa-step-backward"></i>
+							</a>
+						</li>
+						<li class="option-menu-item">
+							<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn play">
+								<i class=" icon-pause far fa-pause-circle"></i>
+								<i class=" icon-play far fa-play-circle"></i>
+							</a>
+						</li>
+						<li class="option-menu-item">
+							<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle next">
+								<i class=" fas fa-step-forward"></i>
+							</a>
+						</li>
+						<li class="option-menu-item">
+							<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle repeat">
+								<i class=" fas fa-sync-alt"></i>
+							</a>
+						</li>
+				</ul>
+				<div class="option-menu-bottom audio-control-time-bar">
+					<span class="audio-control-time current">00:00</span>
+					<div class="form-input-progress">
+						<input  name="audio-control-time-bar"type="range"class="form-input-progress-range">
+						<span class="form-input-progress-bar"></span>
+					</div>
+					<span class="audio-control-time end">00:00</span>
+				</div>
+			</div>
+			<div class="col audio-control-right">
+				<ul class="option-menu">
+					<li class="option-menu-item">
+						<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle lyric">
+							<i class="bi bi-file-earmark-music"></i>
+						</a>
+					</li>
+					<li class="option-menu-item audio-control-volume-bar">
+						<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle volume">
+							<i class="icon-volume fas fa-volume-up"></i>
+						</a>
+						<div class="form-input-group ">
+							<div class="form-input-progress">
+								<input name="audio-control-volume-bar"type="range"class="form-input-progress-range">
+								<span class="form-input-progress-bar"></span>
+							</div>
+						</div>
+					</li>
+					<li class="option-menu-item">
+						<span class="vertical-line"></span>
+					</li>
+					<li class="option-menu-item">
+						<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-square list canvas-btn" data-target="#listSong">
+							<i class="bi bi-music-note-list"></i>
+						</a>							
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="menu-song-container canvas"data-style="canvas-right" id="listSong">
+		<div class="menu-song-content canvas-content">
+			<div class="menu-song-content-head">
+				<ul class="option-menu-tab menu-song-toggle"style="--total-item:2">
+					<span class="option-menu-tab-label"></span>
+					<li class="option-menu-tab-item">
+						<a href="#" class="option-menu-tab-item-link active">Danh sách phát</a>
+					</li>
+					<li class="option-menu-tab-item">
+						<a href="#" class="option-menu-tab-item-link">Nghe gần đây</a>
+					</li>
 
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                              <div class="group-card-item-option">
-                                 <button class="group-card-item-like">
-                                    <i class="icon-like far fa-heart"></i>
-                                    <i class="icon-liked fas fa-heart"></i>
-                                 </button>
-                                 <button class="group-card-item-play"><i class="far fa-play-circle"></i></button>
-                                 <button class="group-card-item-more"><i class="fas fa-ellipsis-h"></i></button>
-                              </div>
-                           </div>
-                           <h5 class="group-card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
-                        </div>
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content square">
-                                 <img class="group-card-item-img"src="./img/card2.jpg" alt="">
-                              </div>
+				 </ul>
+				<ul class="option-menu menu-song-option">
+					<li class="option-menu-item">
+						<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle alarm modal-btn"data-target="#alarmModal">
+							<i class="bi bi-alarm"></i>
+						</a>
+					</li>
+					<li class="option-menu-item">
+						<a href="#"data-type="button"aria-hidden="true" class="option-menu-btn btn-circle more">
+							<i class=" fas fa-ellipsis-h"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<nav class="menu-song-content-body">
 
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                              <div class="group-card-item-option">
-                                 <button class="group-card-item-like">
-                                    <i class="icon-like far fa-heart"></i>
-                                    <i class="icon-liked fas fa-heart"></i>
-                                 </button>
-                                 <button class="group-card-item-play"><i class="far fa-play-circle"></i></button>
-                                 <button class="group-card-item-more"><i class="fas fa-ellipsis-h"></i></button>
-                              </div>
-                           </div>
-                           <h5 class="group-card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
-                        </div>
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content square">
-                                 <img class="group-card-item-img"src="./img/card3.jpg" alt="">
-                              </div>
-
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                              <div class="group-card-item-option">
-                                 <button class="group-card-item-like">
-                                    <i class="icon-like far fa-heart"></i>
-                                    <i class="icon-liked fas fa-heart"></i>
-                                 </button>
-                                 <button class="group-card-item-play"><i class="far fa-play-circle"></i></button>
-                                 <button class="group-card-item-more"><i class="fas fa-ellipsis-h"></i></button>
-                              </div>
-                           </div>
-                           <h5 class="group-card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
-                        </div>
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content square">
-                                 <img class="group-card-item-img"src="./img/card4.jpg" alt="">
-                              </div>
-
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                              <div class="group-card-item-option">
-                                 <button class="group-card-item-like">
-                                    <i class="icon-like far fa-heart"></i>
-                                    <i class="icon-liked fas fa-heart"></i>
-                                 </button>
-                                 <button class="group-card-item-play"><i class="far fa-play-circle"></i></button>
-                                 <button class="group-card-item-more"><i class="fas fa-ellipsis-h"></i></button>
-                              </div>
-                           </div>
-                           <h5 class="group-card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
-                        </div>
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content square">
-                                 <img class="group-card-item-img"src="./img/card3.jpg" alt="">
-                              </div>
-
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                              <div class="group-card-item-option">
-                                 <button class="group-card-item-like">
-                                    <i class="icon-like far fa-heart"></i>
-                                    <i class="icon-liked fas fa-heart"></i>
-                                 </button>
-                                 <button class="group-card-item-play"><i class="far fa-play-circle"></i></button>
-                                 <button class="group-card-item-more"><i class="fas fa-ellipsis-h"></i></button>
-                              </div>
-                           </div>
-                           <h5 class="group-card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
-                        </div>
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content square">
-                                 <img class="group-card-item-img"src="./img/card1.jpg" alt="">
-                              </div>
-
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                              <div class="group-card-item-option">
-                                 <button class="group-card-item-like">
-                                    <i class="icon-like far fa-heart"></i>
-                                    <i class="icon-liked fas fa-heart"></i>
-                                 </button>
-                                 <button class="group-card-item-play"><i class="far fa-play-circle"></i></button>
-                                 <button class="group-card-item-more"><i class="fas fa-ellipsis-h"></i></button>
-                              </div>
-                           </div>
-                           <h5 class="group-card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
-                        </div>
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content square">
-                                 <img class="group-card-item-img"src="./img/card4.jpg" alt="">
-                              </div>
-
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                              <div class="group-card-item-option">
-                                 <button class="group-card-item-like">
-                                    <i class="icon-like far fa-heart"></i>
-                                    <i class="icon-liked fas fa-heart"></i>
-                                 </button>
-                                 <button class="group-card-item-play"><i class="far fa-play-circle"></i></button>
-                                 <button class="group-card-item-more"><i class="fas fa-ellipsis-h"></i></button>
-                              </div>
-                           </div>
-                           <h5 class="group-card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
-                        </div>
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content square">
-                                 <img class="group-card-item-img"src="./img/card1.jpg" alt="">
-                              </div>
-
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                              <div class="group-card-item-option">
-                                 <button class="group-card-item-like">
-                                    <i class="icon-like far fa-heart"></i>
-                                    <i class="icon-liked fas fa-heart"></i>
-                                 </button>
-                                 <button class="group-card-item-play"><i class="far fa-play-circle"></i></button>
-                                 <button class="group-card-item-more"><i class="fas fa-ellipsis-h"></i></button>
-                              </div>
-                           </div>
-                           <h5 class="group-card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
-                        </div>
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content square">
-                                 <img class="group-card-item-img"src="./img/card1.jpg" alt="">
-                              </div>
-
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                              <div class="group-card-item-option">
-                                 <button class="group-card-item-like">
-                                    <i class="icon-like far fa-heart"></i>
-                                    <i class="icon-liked fas fa-heart"></i>
-                                 </button>
-                                 <button class="group-card-item-play"><i class="far fa-play-circle"></i></button>
-                                 <button class="group-card-item-more"><i class="fas fa-ellipsis-h"></i></button>
-                              </div>
-                           </div>
-                           <h5 class="group-card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
-                        </div>
-                     </div>
-                  </div>
-                  <!-------------------------------------------------------------------->
-                  <div class="group-card-content">
-                     <div class="group-card-head">
-                        <h1 class="group-card-title">Những Bản Hit</h1>
-                        <ul class="group-card-menu-arrow">
-                           <li class="group-card-menu-arrow-item">
-                              <a href="#" type="button"class="group-card-menu-arrow-btn left">
-                                 <i class="fas fa-chevron-left"></i>
-                              </a>  
-                           </li>
-                           <li class="group-card-menu-arrow-item">
-                              <a href="#" type="button"class="group-card-menu-arrow-btn right">
-                                 <i class="fas fa-chevron-right"></i>
-                              </a>
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="group-card-body">
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content circle">
-                                 <img class="group-card-item-img"src="./img/card1.jpg" alt="">
-                              </div>
-
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                              <div class="group-card-item-option">
-                                 <button class="group-card-item-like">
-                                    <i class="icon-like far fa-heart"></i>
-                                    <i class="icon-liked fas fa-heart"></i>
-                                 </button>
-                                 <button class="group-card-item-play"><i class="far fa-play-circle"></i></button>
-                                 <button class="group-card-item-more"><i class="fas fa-ellipsis-h"></i></button>
-                              </div>
-                           </div>
-                           <h5 class="group-card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
-                        </div>
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content circle">
-                                 <img class="group-card-item-img"src="./img/card1.jpg" alt="">
-                              </div>
-
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                              <div class="group-card-item-option">
-                                 <button class="group-card-item-like">
-                                    <i class="icon-like far fa-heart"></i>
-                                    <i class="icon-liked fas fa-heart"></i>
-                                 </button>
-                                 <button class="group-card-item-play"><i class="far fa-play-circle"></i></button>
-                                 <button class="group-card-item-more"><i class="fas fa-ellipsis-h"></i></button>
-                              </div>
-                           </div>
-                           <h5 class="group-card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
-                        </div>
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content circle">
-                                 <img class="group-card-item-img"src="./img/card1.jpg" alt="">
-                              </div>
-
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                              <div class="group-card-item-option">
-                                 <button class="group-card-item-like">
-                                    <i class="icon-like far fa-heart"></i>
-                                    <i class="icon-liked fas fa-heart"></i>
-                                 </button>
-                                 <button class="group-card-item-play"><i class="far fa-play-circle"></i></button>
-                                 <button class="group-card-item-more"><i class="fas fa-ellipsis-h"></i></button>
-                              </div>
-                           </div>
-                           <h5 class="group-card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
-                        </div>
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content circle">
-                                 <img class="group-card-item-img"src="./img/card1.jpg" alt="">
-                              </div>
-
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                              <div class="group-card-item-option">
-                                 <button class="group-card-item-like">
-                                    <i class="icon-like far fa-heart"></i>
-                                    <i class="icon-liked fas fa-heart"></i>
-                                 </button>
-                                 <button class="group-card-item-play"><i class="far fa-play-circle"></i></button>
-                                 <button class="group-card-item-more"><i class="fas fa-ellipsis-h"></i></button>
-                              </div>
-                           </div>
-                           <h5 class="group-card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
-                        </div>
-                        <div class="col group-card-item">
-                           <div class="group-card-item-container">
-                              <div class="group-card-item-content circle">
-                                 <img class="group-card-item-img"src="./img/card1.jpg" alt="">
-                              </div>
-
-                              <a href="#"type="button" class="group-card-item-link"></a>
-                              <div class="group-card-item-option">
-                                 <button class="group-card-item-like">
-                                    <i class="icon-like far fa-heart"></i>
-                                    <i class="icon-liked fas fa-heart"></i>
-                                 </button>
-                                 <button class="group-card-item-play"><i class="far fa-play-circle"></i></button>
-                                 <button class="group-card-item-more"><i class="fas fa-ellipsis-h"></i></button>
-                              </div>
-                           </div>
-                           <h5 class="group-card-item-title">Top 100 bài nhạc trẻ hay nhất</h5>
-                        </div>                     
-                     </div>
-                  </div>
-               </main>  
-               <footer class="footer-content">
-                  <div class="footer-content-head">
-                     <a href="#"type="button"class="footer-content-title h5">Đối tác âm nhạc</a>
-                  </div>
-                  <div class="footer-content-body">
-                     <div class="footer-partner-list">
-                        <div class="footer-partner-item">
-                           <a href="#"type="button"class="footer-partner-thumbnail">
-                              <img class="width"src="./img/orcahrd.png" alt="">
-                           </a>
-                        </div>
-                        <div class="footer-partner-item">
-                           <a href="#"type="button"class="footer-partner-thumbnail">
-                              <img class="width"src="./img/yg.png" alt="">
-                           </a>
-                        </div>
-                        <div class="footer-partner-item">
-                           <a href="#"type="button"class="footer-partner-thumbnail">
-                              <img class="width"src="./img/universal-1.png" alt="">
-                           </a>
-                        </div>
-                        <div class="footer-partner-item">
-                           <a href="#"type="button"class="footer-partner-thumbnail">
-                              <img class="height"src="./img/monstercat.png" alt="">
-                           </a>
-                        </div>
-                        <div class="footer-partner-item">
-                           <a href="#"type="button"class="footer-partner-thumbnail">
-                              <img class="height"src="./img/sony.png" alt="">
-                           </a>
-                        </div>
-                        <div class="footer-partner-item">
-                           <a href="#"type="button"class="footer-partner-thumbnail">
-                              <img class="height"src="./img/beggers.png" alt="">
-                           </a>
-                        </div>
-                        <div class="footer-partner-item">
-                           <a href="#"type="button"class="footer-partner-thumbnail">
-                              <img class="height"src="./img/empire.png" alt="">
-                           </a>
-                        </div>
-                        <div class="footer-partner-item">
-                           <a href="#"type="button"class="footer-partner-thumbnail">
-                              <img class="height"src="./img/warner.png" alt="">
-                           </a>
-                        </li>
-                     </div>
-                  </div>
-               </footer>
-         </section>
-   </section>
-   <section class="audio-container">            
-      <div class="audio-content"id="audio">
-         <audio class="audio-control"></audio>
-         <div class="col audio-content-left">
-            <div class="row audio-content-view">
-               <div class="col audio-content-view-left">
-                  <div class="audio-control-view-thumbnail">
-                     <div class="audio-control-view-thumbnail-circle">
-                        <img class="audio-control-view-thumbnail-img"src="" alt="">
-                     </div>
-                     <div class="audio-control-view-thumbnail-animation">
-                        <div class="list">
-                           <span style="--item:0"><i class="bi bi-music-note"></i></span>
-                           <span style="--item:1"><i class="bi bi-music-note-beamed"></i></span>
-                           <span style="--item:2"><i class="bi bi-music-note"></i></span>
-                           <span style="--item:3"><i class="bi bi-music-note"></i></span>
-                           <span style="--item:4"><i class="bi bi-music-note-beamed"></i></span>
-                           <span style="--item:5"><i class="bi bi-music-note"></i></span>
-                           <span style="--item:6"><i class="bi bi-music-note-beamed"></i></span>
-                           <span style="--item:7"><i class="bi bi-music-note-beamed"></i></span>
-                           <span style="--item:8"><i class="bi bi-music-note"></i></span>
-                           <span style="--item:9"><i class="bi bi-music-note-beamed"></i></span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col audio-content-view-center">
-                  <div class="audio-content-view-center-top"><a href="#"class="h5 audio-control-view-title"></a></div>
-                  <div class="audio-content-view-center-bottom"><span class="audio-control-view-auth"></span></div>
-               </div>
-               <div class="col audio-content-view-right">
-                  <ul class="option-menu">
-                     <li class="option-menu-item">
-                        <a href="#"type="button" class="option-menu-btn btn-circle like">
-                           <i class=" icon-like far fa-heart"></i>
-                           <i class=" icon-liked fas fa-heart"></i>
-                        </a>
-                     </li>
-                     <li class="option-menu-item">
-                        <a href="#"type="button" class="option-menu-btn btn-circle more">
-                           <i class=" fas fa-ellipsis-h"></i>
-                        </a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-         <div class="col audio-content-center">
-            <ul class="option-menu">
-               <li class="option-menu-item">
-                  <a href="#"type="button" class="option-menu-btn btn-circle random">
-                     <i class=" fas fa-random"></i>
-                  </a>
-               </li>
-               <li class="option-menu-item">
-                  <a href="#"type="button" class="option-menu-btn btn-circle back">
-                     <i class=" fas fa-step-backward"></i>
-                  </a>
-               </li>
-               <li class="option-menu-item">
-                  <a href="#"type="button" class="option-menu-btn play">
-                     <i class=" icon-pause far fa-pause-circle"></i>
-                     <i class=" icon-play far fa-play-circle"></i>
-                  </a>
-               </li>
-               <li class="option-menu-item">
-                  <a href="#"type="button" class="option-menu-btn btn-circle next">
-                     <i class=" fas fa-step-forward"></i>
-                  </a>
-               </li>
-               <li class="option-menu-item">
-                  <a href="#"type="button" class="option-menu-btn btn-circle repeat">
-                     <i class=" fas fa-sync-alt"></i>
-                  </a>
-               </li>
-            </ul>
-            <div class="option-menu-bottom">
-               <span class="audio-content-time current">00:00</span>
-               <div class="form-input-progress audio-content-time-bar">
-                  <input  name="audio-content-time-bar"type="range"class="form-input-progress-range">
-                  <span class="form-input-progress-bar"></span>
-               </div>
-               <span class="audio-content-time end">00:00</span>
-            </div>
-         </div>
-         <div class="col audio-content-right">
-            <ul class="option-menu">
-               <li class="option-menu-item">
-                  <a href="#"type="button" class="option-menu-btn btn-circle lyric">
-                     <i class="bi bi-file-earmark-music"></i>
-                  </a>
-               </li>
-               <li class="option-menu-item">
-                  <a href="#"type="button" class="option-menu-btn btn-circle volume">
-                     <i class="icon-volume fas fa-volume-up"></i>
-                  </a>
-               </li>
-               <div class="form-input-group">
-                  <div class="form-input-progress audio-content-volume-bar">
-                     <input name="audio-content-volume-bar"type="range"class="form-input-progress-range">
-                     <span class="form-input-progress-bar"></span>
-                  </div>
-               </div>
-               <li class="option-menu-item">
-                  <a href="#"type="button" class="option-menu-btn btn-circle zoom">
-                     <i class=" fas fa-expand-alt"></i>
-                  </a>
-               </li>
-               <span class="vertical-line"></span>
-               <li class="option-menu-item">
-                  <a href="#"type="button" class="option-menu-btn btn-square list modal-btn" data-target="#listSongModal">
-                     <i class="bi bi-music-note-list"></i>
-                  </a>                    
-               </li>
-            </ul>
-         </div>
-      </div>
-   </section>
-      <div class="modal" id="listSongModal">
-         <div class="audio-list-content modal-content">
-            <div class="audio-list-content-head">
-                  <div class="option-menu-list"style="--total-item:2">
-                     <input type="radio"name="list"id="item1"class="option-menu-list-item"checked>
-                        <label for="item1">Danh sách phát</label>
-                     <input type="radio"name="list"id="item2"class="option-menu-list-item">
-                        <label for="item2">Nghe gần đây</label>
-                  </div>
-                  <ul class="option-menu">
-                     <li class="option-menu-item">
-                        <a href="#"type="button" class="option-menu-btn btn-circle alarm modal-btn"data-target="#alarmModal">
-                           <i class="bi bi-alarm"></i>
-                        </a>
-                     </li>
-                     <li class="option-menu-item">
-                        <a href="#"type="button" class="option-menu-btn btn-circle more">
-                           <i class=" fas fa-ellipsis-h"></i>
-                        </a>
-                     </li>
-                  </ul>
-            </div>
-            <nav class="audio-list-content-body">
-               <ul class="audio-list-menu"id="listSongPlaying">
-               </ul>
-            </nav>
-         </div>
-      </div>
-      <div class="modal" id="alarmModal">
-         <a href="#" class="modal-overlay"></a>
-         <div class="alarm-content modal-content">
-            <div class="alarm-content-head">
-               <h3>Hẹn Giờ Dừng Phát Nhạc</h3>
-            </div>
-            <div class="alarm-content-body">
-               <div class="alarm-content-time">
-                  <div class="alarm-content-time-input h">
-                     <input type="number"class="alarm-content-time-step h"min="0"max="99"step="1"value="00"placeholder="00">
-                     <label for="">Giờ</label>
-                  </div>
-                  <span>:</span>
-                  <div class="alarm-content-time-input i">
-                     <input type="number"class="alarm-content-time-step i"min="0"max="59"step="1"value="00"placeholder="00">
-                     <label for="">Phút</label>
-                  </div>
-               </div>
-               <span class="alarm-content-decription"></span>
-            </div>
-            <div class="alarm-content-foot">
-               <button type="button"class="alarm-content-btn save">Lưu lại</button>
-               <button type="button"class="alarm-content-btn cancel">Hủy</button>
-            </div>   
-         </div>
-      </div>
-   <script src="./js/style.js" type="text/javascript"/></script>
+			</nav>
+		</div>
+	</section>
+	<div class="modal" id="alarmModal">
+		<a href="#" class="modal-overlay"></a>
+		<div class="alarm-content modal-content">
+			<div class="alarm-content-head">
+				<h3>Hẹn Giờ Dừng Phát Nhạc</h3>
+			</div>
+			<div class="alarm-content-body">
+				<div class="alarm-content-time">
+					<div class="alarm-content-time-input h">
+						<input type="number"class="alarm-content-time-step h"min="0"max="99"step="1"value="00"placeholder="00">
+						<label for="">Giờ</label>
+					</div>
+					<span>:</span>
+					<div class="alarm-content-time-input i">
+						<input type="number"class="alarm-content-time-step i"min="0"max="59"step="1"value="00"placeholder="00">
+						<label for="">Phút</label>
+					</div>
+				</div>
+				<span class="alarm-content-decription"></span>
+			</div>
+			<div class="alarm-content-foot">
+				<button data-type="button"class="alarm-content-btn save">Lưu lại</button>
+				<button data-type="button"class="alarm-content-btn modal-cancel">Hủy</button>
+			</div>	
+		</div>
+	</div>
+	<div class="modal" id="customThemeModal">
+		<a href="#" class="modal-overlay"></a>
+		<div class="custom-theme-content modal-content">
+			<div class="custom-theme-content-head">
+				<h2 class="custom-theme-content-title">Giao diện</h2>
+				<button data-type="button"class="modal-cancel custom-theme-content-btn"><i class="fas fa-times"></i></button>
+			</div>
+			<div class="custom-theme-content-body">
+				<div class="col custom-theme-content-body-colume">
+					<div class="row"id="">
+						<div class="group-card-content">
+							<div class="group-card-head">
+								<h3 class="group-card-title">Chủ đề</h3>
+							</div>
+							<div class="group-card-body flex-wrap">
+								<div class="col card-item custom-theme-content-card">
+									<div class="card-item-container">
+										<div class="card-item-content rectangle ">
+											<div class="card-item-thumbnail custom-theme-thumbnail">
+											</div>
+											<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+										</div>
+										<div class="card-item-option">
+											<ul class="option-menu-custom">
+												<li class="option-menu-custom-item">
+													<a href="#"data-type="button"aria-hidden="true" class="option-menu-custom-btn apply">
+															Áp dụng
+													</a>
+												</li>
+												<li class="option-menu-custom-item">
+													<a href="#"data-type="button"aria-hidden="true" class="option-menu-custom-btn view">
+														Xem trước
+													</a>
+												</li>
+											</ul>
+										</div>											
+									</div>
+									<h5 class="card-item-title"> </h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row"id="">
+						<div class="group-card-content">
+							<div class="group-card-head">
+								<h3 class="group-card-title">Màu sắc</h3>
+							</div>
+							<div class="group-card-body flex-wrap">
+								<div class="col card-item custom-theme-content-card"data-theme="white">
+									<div class="card-item-container">
+										<div class="card-item-content rectangle ">
+											<div class="card-item-thumbnail custom-theme-thumbnail">
+												<div class="custom-theme-thumbnail-left">
+													<div class="custom-theme-thumbnail-content"></div>
+												</div>
+												<div class="custom-theme-thumbnail-right">
+													<span class="custom-theme-thumbnail-text">****************</span>
+													<div class="custom-theme-thumbnail-content"></div>
+													<div class="custom-theme-thumbnail-content"></div>
+												</div>
+												<div class="custom-theme-thumbnail-footer"></div>
+											</div>
+											<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+										</div>
+										<div class="card-item-option">
+											<ul class="option-menu-custom">
+												<li class="option-menu-custom-item">
+													<a href="#"data-type="button"aria-hidden="true" class="option-menu-custom-btn apply">
+															Áp dụng
+													</a>
+												</li>
+												<li class="option-menu-custom-item">
+													<a href="#"data-type="button"aria-hidden="true" class="option-menu-custom-btn view">
+														Xem trước
+													</a>
+												</li>
+											</ul>
+										</div>											
+									</div>
+									<h5 class="card-item-title">White mode</h5>
+								</div>
+								<div class="col card-item custom-theme-content-card"data-theme="black">
+									<div class="card-item-container">
+										<div class="card-item-content rectangle ">
+											<div class="card-item-thumbnail custom-theme-thumbnail">
+												<div class="custom-theme-thumbnail-left">
+													<div class="custom-theme-thumbnail-content"></div>
+												</div>
+												<div class="custom-theme-thumbnail-right">
+													<span class="custom-theme-thumbnail-text">****************</span>
+													<div class="custom-theme-thumbnail-content"></div>
+													<div class="custom-theme-thumbnail-content"></div>
+												</div>
+												<div class="custom-theme-thumbnail-footer"></div>
+											</div>
+											<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+										</div>
+										<div class="card-item-option">
+											<ul class="option-menu-custom">
+												<li class="option-menu-custom-item">
+													<a href="#"data-type="button"aria-hidden="true" class="option-menu-custom-btn apply">
+															Áp dụng
+													</a>
+												</li>
+												<li class="option-menu-custom-item">
+													<a href="#"data-type="button"aria-hidden="true" class="option-menu-custom-btn view">
+														Xem trước
+													</a>
+												</li>
+											</ul>
+										</div>											
+									</div>
+									<h5 class="card-item-title">Black mode</h5>
+								</div>
+								<div class="col card-item custom-theme-content-card"data-theme="blue">
+									<div class="card-item-container">
+										<div class="card-item-content rectangle ">
+											<div class="card-item-thumbnail custom-theme-thumbnail">
+												<div class="custom-theme-thumbnail-left">
+													<div class="custom-theme-thumbnail-content"></div>
+												</div>
+												<div class="custom-theme-thumbnail-right">
+													<span class="custom-theme-thumbnail-text">****************</span>
+													<div class="custom-theme-thumbnail-content"></div>
+													<div class="custom-theme-thumbnail-content"></div>
+												</div>
+												<div class="custom-theme-thumbnail-footer"></div>
+											</div>
+											<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+										</div>
+										<div class="card-item-option">
+											<ul class="option-menu-custom">
+												<li class="option-menu-custom-item">
+													<a href="#"data-type="button"aria-hidden="true" class="option-menu-custom-btn apply">
+															Áp dụng
+													</a>
+												</li>
+												<li class="option-menu-custom-item">
+													<a href="#"data-type="button"aria-hidden="true" class="option-menu-custom-btn view">
+														Xem trước
+													</a>
+												</li>
+											</ul>
+										</div>											
+									</div>
+									<h5 class="card-item-title">Blue mode</h5>
+								</div>
+								<div class="col card-item custom-theme-content-card"data-theme="rose">
+									<div class="card-item-container">
+										<div class="card-item-content rectangle ">
+											<div class="card-item-thumbnail custom-theme-thumbnail">
+												<div class="custom-theme-thumbnail-left">
+													<div class="custom-theme-thumbnail-content"></div>
+												</div>
+												<div class="custom-theme-thumbnail-right">
+													<span class="custom-theme-thumbnail-text">****************</span>
+													<div class="custom-theme-thumbnail-content"></div>
+													<div class="custom-theme-thumbnail-content"></div>
+												</div>
+												<div class="custom-theme-thumbnail-footer"></div>
+											</div>
+											<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+										</div>
+										<div class="card-item-option">
+											<ul class="option-menu-custom">
+												<li class="option-menu-custom-item">
+													<a href="#"data-type="button"aria-hidden="true" class="option-menu-custom-btn apply">
+															Áp dụng
+													</a>
+												</li>
+												<li class="option-menu-custom-item">
+													<a href="#"data-type="button"aria-hidden="true" class="option-menu-custom-btn view">
+														Xem trước
+													</a>
+												</li>
+											</ul>
+										</div>											
+									</div>
+									<h5 class="card-item-title">Rose mode</h5>
+								</div>
+								<div class="col card-item custom-theme-content-card"data-theme="green">
+									<div class="card-item-container">
+										<div class="card-item-content rectangle ">
+											<div class="card-item-thumbnail custom-theme-thumbnail">
+												<div class="custom-theme-thumbnail-left">
+													<div class="custom-theme-thumbnail-content"></div>
+												</div>
+												<div class="custom-theme-thumbnail-right">
+													<span class="custom-theme-thumbnail-text">****************</span>
+													<div class="custom-theme-thumbnail-content"></div>
+													<div class="custom-theme-thumbnail-content"></div>
+												</div>
+												<div class="custom-theme-thumbnail-footer"></div>
+											</div>
+											<a href="#"data-type="button"aria-hidden="true" class="card-item-link"></a>
+										</div>
+										<div class="card-item-option">
+											<ul class="option-menu-custom">
+												<li class="option-menu-custom-item">
+													<a href="#"data-type="button"aria-hidden="true" class="option-menu-custom-btn apply">
+															Áp dụng
+													</a>
+												</li>
+												<li class="option-menu-custom-item">
+													<a href="#"data-type="button"aria-hidden="true" class="option-menu-custom-btn view">
+														Xem trước
+													</a>
+												</li>
+											</ul>
+										</div>											
+									</div>
+									<h5 class="card-item-title">Green mode</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="custom-theme-content-foot">
+			</div>	
+		</div>
+	</div>
+	<script src="./js/style.js" type="text/javascript"/></script>
 </body>
-</html>  
+</html>	
