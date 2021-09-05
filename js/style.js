@@ -681,7 +681,7 @@ const audioControl={
                          <li class="menu-song-item "data-index="${index}">
                              <a href="#"data-type="button" class="menu-song-item-play">
                                  <span class="menu-song-item-thumbnail">
-                                     <img src="${song.img || '../../img/zingmp3icon.png'}" alt="" >
+                                     <img src="${song.img || './img/zingmp3icon.png'}" alt="" >
                                  </span>
                                  <i class="icon-pause fas fa-play"></i>
                                  <i class="icon-play bi bi-soundwave"></i>
@@ -764,7 +764,7 @@ const audioControl={
             };
             return{
                 default:function(){
-                    _elements.img.src           ="../../img/zingmp3icon.png";
+                    _elements.img.src           ="./img/zingmp3icon.png";
                     _elements.title.innerText   ="";
                     _elements.singer.innerText  ="";
                 },
@@ -775,7 +775,7 @@ const audioControl={
                     }
                 },
                 loadView:function(){
-                    _elements.img.src           =_this.song.currentSong.img    || "../../img/zingmp3icon.png";
+                    _elements.img.src           =_this.song.currentSong.img    || "./img/zingmp3icon.png";
                     _elements.title.innerText   =_this.song.currentSong.name   || "";
                     _elements.singer.innerText  =_this.song.currentSong.singer || "";
                 },
@@ -800,12 +800,12 @@ const audioControl={
             }
             return{
                 default:function(){
-                    _elements.img.src            ="../../img/zingmp3icon.png";
+                    _elements.img.src            ="./img/zingmp3icon.png";
                     _elements.title.innerText    ="";
                     _elements.singer.innerText   ="";
                 },
                 loadView:function(){
-                    _elements.img.src               =_this.song.currentSong.img??"../../img/zingmp3icon.png";
+                    _elements.img.src               =_this.song.currentSong.img??"./img/zingmp3icon.png";
                     _elements.title.innerText       =_this.song.currentSong.name;
                     _elements.singer.innerText      =_this.song.currentSong.singer;
                     _elements.downloadBtn.download  =_this.song.currentSong.src;
@@ -1065,57 +1065,57 @@ const audioControl={
                        {
                         "name": "KCT - La La La (Never Give It Up)",
                         "singer": "",
-                        "src": "../../audio/KCT - La La La (Never Give It Up).mp3",
+                        "src": "./audio/KCT - La La La (Never Give It Up).mp3",
                         "type": "audio/mpeg",
-                        "img": "../../img/img-song-1.jpg"
+                        "img": "./img/img-song-1.jpg"
                     }, {
                         "name": "(Tik Tok Remix) Quan Sơn Tửu",
                         "singer": "Đẳng Thập Ma Quân",
-                        "src": "../../audio/(Tik Tok Remix) Quan Sơn Tửu - Đẳng Thập Ma Quân.mp3",
+                        "src": "./audio/(Tik Tok Remix) Quan Sơn Tửu - Đẳng Thập Ma Quân.mp3",
                         "type": "audio/mpeg",
-                        "img": "../../img/card4.jpg"
+                        "img": "./img/card4.jpg"
                     }, {
                         "name": "9420",
                         "singer": "",
-                        "src": "../../audio/9420.mp3",
+                        "src": "./audio/9420.mp3",
                         "type": "audio/mpeg",
                         "img": ""
                     }, {
                         "name": "[VIETSUB-FMV] Nhất tiếu khuynh thành",
                         "singer": "Bành Tiểu Nhiễm",
-                        "src": "../../audio/[VIETSUB-FMV] Nhất tiếu khuynh thành -Công chúa Tây Châu Tiểu Phong- Bành Tiểu Nhiễm.mp3",
+                        "src": "./audio/[VIETSUB-FMV] Nhất tiếu khuynh thành -Công chúa Tây Châu Tiểu Phong- Bành Tiểu Nhiễm.mp3",
                         "type": "audio/mpeg",
-                        "img": "../../img/card2.jpg"
+                        "img": "./img/card2.jpg"
                     }, {
                         "name": "Tình sầu thiên thu muôn lối",
                         "singer": "",
-                        "src": "../../audio/tinhsauthienthumuonloi.mp3",
+                        "src": "./audio/tinhsauthienthumuonloi.mp3",
                         "type": "audio/mpeg",
-                        "img": "../../img/card3.jpg"
+                        "img": "./img/card3.jpg"
                     }, {
                         "name": "Túy Hồng Nhan (Remix) ll OST Thủy Hử, China Mix",
                         "singer": "",
-                        "src": "../../audio/Túy Hồng Nhan (Remix) ll OST Thủy Hử, China Mix.mp3",
+                        "src": "./audio/Túy Hồng Nhan (Remix) ll OST Thủy Hử, China Mix.mp3",
                         "type": "audio/mpeg",
-                        "img": "../../img/card4.jpg"
+                        "img": "./img/card4.jpg"
                     }, {
                         "name": "Luân Hồi Chi Cảnh 《轮回之境》 Critty",
                         "singer": "",
-                        "src": "../../audio/Luân Hồi Chi Cảnh 《轮回之境》 Critty - Mỹ nhân Diễm Linh Cơ.mp3",
+                        "src": "./audio/Luân Hồi Chi Cảnh 《轮回之境》 Critty - Mỹ nhân Diễm Linh Cơ.mp3",
                         "type": "audio/mpeg",
-                        "img": "../../img/card1.jpg"
+                        "img": "./img/card1.jpg"
                     }, {
                         "name": "[Vietsub] Tư Niệm Nhiễu Chỉ Tiêm - 海鸟飞鱼 - 思念绕指尖 (DJ名龙版)",
                         "singer": "Hải Điểu Phi Ngư (Remix)",
-                        "src": "../../audio/[Vietsub] Tư Niệm Nhiễu Chỉ Tiêm - Hải Điểu Phi Ngư (Remix) 海鸟飞鱼 - 思念绕指尖 (DJ名龙版).mp3",
+                        "src": "./audio/[Vietsub] Tư Niệm Nhiễu Chỉ Tiêm - Hải Điểu Phi Ngư (Remix) 海鸟飞鱼 - 思念绕指尖 (DJ名龙版).mp3",
                         "type": "audio/mpeg",
-                        "img": "../../img/card3.jpg"
+                        "img": "./img/card3.jpg"
                     }, {
                         "name": "Vọng xuyên bỉ ngạn",
                         "singer": "",
-                        "src": "../../audio/vongxuyenbingan.mp3",
+                        "src": "./audio/vongxuyenbingan.mp3",
                         "type": "audio/mpeg",
-                        "img": "../../img/card4.jpg"
+                        "img": "./img/card4.jpg"
                     }
                 ]
             );
